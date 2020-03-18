@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input id="file" type="file">
+    <button @click="upload">upload</button>
+    <table border=1>
+      <tr>
+        <td v-for="h in header">{{h}}</td>
+      </tr>
+      <tr v-for="file in files">
+        <td><img :src="file.content" width=200></td>
+        <td>{{file.name}}</td>
+        <td>{{file.size}}</td>
+      </tr>
+    </table>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
